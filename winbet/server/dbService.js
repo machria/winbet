@@ -26,7 +26,7 @@ class DbService {
     async getAllData() {
         try {
             const response = await new Promise((resolve, reject) => {
-                const query = "SELECT * FROM user;";
+                const query = "SELECT * FROM Membre;";
                 connection.query(query, (err, results) => {
                     if (err) reject(new Error(err.message));
                     resolve(results);
@@ -43,7 +43,7 @@ class DbService {
         try {
             const dateAdded = new Date();
             const insertId = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO user (login,date_added, password) VALUES (?,?, '');";
+                const query = "INSERT INTO Membre (id_membre,pseudo,password,born_date,email,status) VALUES (DEFAULT,?,?,?,?,?);";
                 console.log ("login : " + name);
                 connection.query(query, [name, dateAdded] , (err, result) => {
                     if (err) reject(new Error(err.message));
