@@ -1,0 +1,125 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 29, 2021 at 08:55 AM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `winbet`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Membre`
+--
+
+CREATE TABLE `Membre` (
+  `id_membre` int(11) NOT NULL,
+  `pseudo` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `born_date` date NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `status` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Message`
+--
+
+CREATE TABLE `Message` (
+  `id_message` int(11) NOT NULL,
+  `id_source` int(11) NOT NULL,
+  `id_dest` int(11) NOT NULL,
+  `message` varchar(1024) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Paris`
+--
+
+CREATE TABLE `Paris` (
+  `id_paris` int(11) NOT NULL,
+  `match` varchar(256) NOT NULL,
+  `prono` varchar(256) NOT NULL,
+  `cote` double NOT NULL,
+  `status` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Trafic`
+--
+
+CREATE TABLE `Trafic` (
+  `id_trafic` int(11) NOT NULL,
+  `id_membre` int(11) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `Membre`
+--
+ALTER TABLE `Membre`
+  ADD PRIMARY KEY (`id_membre`);
+
+--
+-- Indexes for table `Message`
+--
+ALTER TABLE `Message`
+  ADD PRIMARY KEY (`id_message`);
+
+--
+-- Indexes for table `Paris`
+--
+ALTER TABLE `Paris`
+  ADD PRIMARY KEY (`id_paris`);
+
+--
+-- Indexes for table `Trafic`
+--
+ALTER TABLE `Trafic`
+  ADD PRIMARY KEY (`id_trafic`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `Membre`
+--
+ALTER TABLE `Membre`
+  MODIFY `id_membre` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `Message`
+--
+ALTER TABLE `Message`
+  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `Paris`
+--
+ALTER TABLE `Paris`
+  MODIFY `id_paris` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `Trafic`
+--
+ALTER TABLE `Trafic`
+  MODIFY `id_trafic` int(11) NOT NULL AUTO_INCREMENT;
