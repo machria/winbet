@@ -21,10 +21,15 @@ app.get('/getAll', (request, response) => {
 
 app.post('/insert', (request, response) => {
     console.log("server get : " + request.body)
-    const { name } = request.body;
+    const { name } = request.body.name;
+    const { born } = request.body.born;
+    const { password } = request.body.password;
+    const { status } = request.body.status;
+    const { email } = request.body.email;
+
     const db = dbService.getDbServiceInstance();
     
-    const result = db.insertNewName(name);
+    const result = db.insertNewName(name, born, password, status, email);
 
     result
     .then(data => response.json({ data: data}))

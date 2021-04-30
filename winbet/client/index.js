@@ -11,7 +11,21 @@ const addBtn = document.querySelector('#add-name-btn');
 addBtn.onclick = function () {
     const nameInput = document.querySelector('#name-input');
     const name = nameInput.value;
+    const bornInput = document.querySelector('#born-input');
+    const born = bornInput.value;
+    const passwordInput = document.querySelector('#password-input');
+    const password = passwordInput.value;
+    const statusInput = document.querySelector('#status-select');
+    const status = statusInput.value;
+    const emailInput = document.querySelector('#email-input');
+    const email = emailInput.value;
+    
     nameInput.value = "";
+    bornInput.value = "";
+    passwordInput.value = "";
+    statusInput.value = "";
+    emailInput.value = "";
+
     console.log("name input get :" + name)
     
     fetch('http://localhost:5000/insert', {
@@ -19,7 +33,7 @@ addBtn.onclick = function () {
             'Content-type': 'application/json'
         },
         method: 'POST',
-        body: JSON.stringify({ name : name})
+        body: JSON.stringify({ name : name, born : born, password : password, status : status, email : email})
     })
     .then(response => response.json())
     .then(data => insertRowIntoTable(data['data']));

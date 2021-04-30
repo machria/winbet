@@ -39,21 +39,24 @@ class DbService {
         }
     }
     
-    async insertNewName(name) {
+    async insertNewName(name, born, password, status, email) {
         try {
             const dateAdded = new Date();
             const insertId = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO Membre (id_membre,pseudo,password,born_date,email,status) VALUES (DEFAULT,?,?,?,?,?);";
+                const query = "INSERT INTO Membre (pseudo,password,born_date,email,status) VALUES (?,?,?,?,?);";
                 console.log ("login : " + name);
-                connection.query(query, [name, dateAdded] , (err, result) => {
+                connection.query(query, [name, password, born, email, status] , (err, result) => {
                     if (err) reject(new Error(err.message));
                     resolve(result.insertId);
                 })
             });
             return {
                 id : insertId,
-                name : name,
-                dateAdded : dateAdded
+                name : name, 
+                born : born, 
+                password : password, 
+                status : status, 
+                email : email
             };
         } catch (error) {
             console.log(error);
