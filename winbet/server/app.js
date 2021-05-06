@@ -20,15 +20,15 @@ app.get('/getAll', (request, response) => {
 // create
 
 app.post('/insert', (request, response) => {
-    console.log("server get : " + request.body)
-    const { name } = request.body.name;
-    const { born } = request.body.born;
-    const { password } = request.body.password;
-    const { status } = request.body.status;
-    const { email } = request.body.email;
+    console.log("server get : " + JSON.stringify(request.body))
+    const  name  = request.body.name;
+    const  born  = request.body.born;
+    const  password  = request.body.password;
+    const  status  = request.body.status;
+    const  email  = request.body.email;
 
     const db = dbService.getDbServiceInstance();
-    
+    console.log("Test"+name);
     const result = db.insertNewName(name, born, password, status, email);
 
     result

@@ -42,16 +42,23 @@ class DbService {
     async insertNewName(name, born, password, status, email) {
         try {
             const dateAdded = new Date();
+            console.log ("email : " + email);
+            console.log ("password : " + password);
+            console.log ("login : " + name);
+            console.log ("born : " + born);
+            console.log ("status : " + status);
             const insertId = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO Membre (pseudo,password,born_date,email,status) VALUES (?,?,?,?,?);";
-                console.log ("login : " + name);
-                connection.query(query, [name, password, born, email, status] , (err, result) => {
+                const query = "INSERT INTO Membre (pseudo,password,email,born_date, status) VALUES (?,?,?,?, ?);";
+                
+
+                connection.query(query, [name, password, email,born, status] , (err, result) => {
+                    //console.log(result);
                     if (err) reject(new Error(err.message));
                     resolve(result.insertId);
                 })
             });
             return {
-                id : insertId,
+               // id : insertId,
                 name : name, 
                 born : born, 
                 password : password, 

@@ -20,11 +20,11 @@ addBtn.onclick = function () {
     const emailInput = document.querySelector('#email-input');
     const email = emailInput.value;
     
-    nameInput.value = "";
-    bornInput.value = "";
-    passwordInput.value = "";
-    statusInput.value = "";
-    emailInput.value = "";
+    //nameInput.value = "";
+    //bornInput.value = "";
+    //passwordInput.value = "";
+    //statusInput.value = "";
+    //emailInput.value = "";
 
     console.log("name input get :" + name)
     
@@ -71,6 +71,7 @@ function insertRowIntoTable(data) {
 }
 
 function loadHTMLTable(data) {
+    /*
     const table = document.querySelector('table tbody');
 
     if (data.length === 0) {
@@ -91,5 +92,5 @@ function loadHTMLTable(data) {
     });
 
     table.innerHTML = tableHtml;
-
+    */
 }
