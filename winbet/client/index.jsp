@@ -12,20 +12,8 @@
 	crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#"><img class="logo"
-				src="Logo_winbet.png" alt="logo"></a>
-
+   <jsp:include page="Nav.jsp" />
 			<style>
-.logo {
-	width: 64px;
-	heigth: 64px;
-}
-
-body {
-	background-color: grey;
-}
 
                 label{
                     display: block;
@@ -48,33 +36,6 @@ body {
                     border-radius: 0.2rem;
                 }
 </style>
-
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link accueil"
-						aria-current="page" href="Acceuil.jsp">Accueil</a></li>
-					<li class="nav-item"><a class="nav-link public" href="#"
-						tabindex="-1" aria-disabled="true">Public</a></li>
-					<li class="nav-item"><a class="nav-link premium" href="#"
-						tabindex="-1" aria-disabled="true">Premium</a></li>
-					<li class="nav-item"><a class="nav-link galerie" href="#"
-						tabindex="-1" aria-disabled="true">Galerie</a></li>
-					<li class="nav-item"><a class="nav-link contact" href="#"
-						tabindex="-1" aria-disabled="true">Contact</a></li>
-					<li class="nav-item"><a class="nav-link inscription" href="#"
-						tabindex="-1" aria-disabled="true">Inscription</a></li>
-					<li class="nav-item"><a class="nav-link inscription" href="#"
-						tabindex="-1" aria-disabled="true">Connexion</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
     <div>
 		<p class = "ispn">Inscription</p>
 	</div>

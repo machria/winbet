@@ -17,6 +17,16 @@ app.get('/getAll', (request, response) => {
 
 })
 
+app.get('/getParisPublic', (request, response) => {
+    const db = dbService.getDbServiceInstance();
+    const result = db.getParisPublic();
+    //console.log (result);
+    result
+    .then(data => response.json({data : data}))
+    .catch(err => console.log(err));
+
+})
+
 // create
 
 app.post('/insert', (request, response) => {
