@@ -47,7 +47,7 @@ body {
 						tabindex="-1" aria-disabled="true">Galerie</a></li>
 					<li class="nav-item"><a class="nav-link contact" href="#"
 						tabindex="-1" aria-disabled="true">Contact</a></li>
-					<li class="nav-item"><a class="nav-link inscription" href="#"
+					<li class="nav-item"><a class="nav-link inscription" href="index.html"
 						tabindex="-1" aria-disabled="true">Inscription</a></li>
 					<li class="nav-item"><a class="nav-link inscription" href="#"
 						tabindex="-1" aria-disabled="true">Connexion</a></li>

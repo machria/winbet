@@ -69,6 +69,32 @@ class DbService {
             console.log(error);
         }
     }
+
+    async deleteUser(iddel) {
+        try {
+            console.log(iddel);
+            console.log("DELETE");
+            iddel = parseInt(iddel,10);
+            const deleteId = await new Promise((resolve, reject) => {
+
+                const query = "DELETE from Membre where id_membre = ? ;";
+                
+
+                connection.query(query, [iddel] , (err, result) => {
+                    //console.log(result);
+                    if (err) reject(new Error(err.message));
+                    resolve(result.deleteId);
+                })
+            });
+            return {
+               // id : insertId,
+                iddel : iddel 
+                
+            };
+        } catch (error) {
+            console.log(error);
+        }
+    }
     
 }
 

@@ -36,5 +36,20 @@ app.post('/insert', (request, response) => {
     .catch(err => console.log(err));
 });
 
+app.post('/delete', (request, response) => {
+    console.log("server get : " + JSON.stringify(request.body));
+    console.log("DELETE            ///");
+    const  iddel  = request.body.iddel;
+    
+
+    const db = dbService.getDbServiceInstance();
+    console.log("Test"+iddel);
+    const result = db.deleteUser(iddel);
+
+    result
+    .then(data => response.json({ data: data}))
+    .catch(err => console.log(err));
+});
+
 
 app.listen(process.env.PORT, () => console.log('app is running'));
