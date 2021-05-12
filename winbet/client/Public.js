@@ -15,12 +15,15 @@ function loadHTMLTable(data) {
 
     let tableHtml = "";
     console.log(data)
-    data.forEach(function ({match, prono, cote, status}) {
+    data.forEach(function ({match, prono, cote, status, type}) {
         tableHtml += "<tr>";
         tableHtml += `<td>${match}</td>`;
         tableHtml += `<td>${prono}</td>`;
         tableHtml += `<td>${cote}</td>`;
         tableHtml += `<td>${status}</td>`;
+        if(type=="Football")
+            urlFoot = "ballon-de-football.svg";
+        tableHtml += `<td><img src = ${urlFoot}></td>`;
         tableHtml += "</tr>";
     });
 
