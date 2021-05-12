@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 const dbService = require('./dbService');
 
@@ -46,15 +48,16 @@ app.post('/insert', (request, response) => {
     .catch(err => console.log(err));
 });
 
-app.post('/delete', (request, response) => {
-    console.log("server get : " + JSON.stringify(request.body));
-    console.log("DELETE            ///");
-    const  iddel  = request.body.iddel;
+app.post('/connect', (request, response) => {
+    console.log("server get : " + JSON.stringify(request.body))
     
+    const  password  = request.body.password;
+    
+    const  email  = request.body.email;
 
     const db = dbService.getDbServiceInstance();
-    console.log("Test"+iddel);
-    const result = db.deleteUser(iddel);
+
+    const result = db.connect(password, email);
 
     result
     .then(data => response.json({ data: data}))
