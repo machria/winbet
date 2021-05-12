@@ -2,6 +2,8 @@ const mysql = require('mysql');
 const dotenv = require('dotenv');
 let instance = null;
 dotenv.config();
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 const connection = mysql.createConnection({
     host: process.env.HOST,
@@ -63,6 +65,8 @@ class DbService {
             console.log ("login : " + name);
             console.log ("born : " + born);
             console.log ("status : " + status);
+            const encryptedPassword = await bcrypt.hash(password, saltRounds);
+            password = encryptedPassword;
             const insertId = await new Promise((resolve, reject) => {
                 const query = "INSERT INTO Membre (pseudo,password,email,born_date, status) VALUES (?,?,?,?, ?);";
                 
@@ -84,6 +88,53 @@ class DbService {
         } catch (error) {
             console.log(error);
         }
+    }
+
+    async connect(password, email){
+         try {
+            
+            const insertId = await new Promise((resolve, reject) => {
+                const query = "Select * from Membre where email = ? ;";
+                
+                let results = "";
+                connection.query(query, [email] , (err, result) =>  {
+                    //console.log(result);
+                    if (err) reject(new Error(err.message));
+                    resolve(result);
+                    //console.log("PASSORW "+result[0].password);       
+                return {
+               // id : insertId,
+                
+                password : password 
+                
+            };
+
+                })
+            });
+        console.log("PASSORW "+insertId[0].password);       
+
+       const comparison = await bcrypt.compare(password, insertId[0].password);
+if(comparison){  
+console.log('OK');            
+return {                
+"code":200,                
+"success":"login successful",                         
+}         
+}else{    
+console.log('Combi mauvaise');                    
+return{                 
+"code":204,                 
+"error":"Email and password does not match"            
+}         
+} 
+ 
+
+        } catch (error) {
+            console.log(error);
+        }
+
+
+
     }
 
     async deleteUser(iddel) {
