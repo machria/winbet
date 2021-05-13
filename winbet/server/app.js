@@ -48,6 +48,22 @@ app.post('/insert', (request, response) => {
     .catch(err => console.log(err));
 });
 
+app.post('/insertMatch', (request, response) => {
+    console.log("server get : " + JSON.stringify(request.body))
+    const  match  = request.body.match;
+    const  pronostic  = request.body.pronostic;
+    const  cote  = request.body.cote;
+    const  statut  = request.body.statut;
+    const  type  = request.body.type;
+
+    const db = dbService.getDbServiceInstance();
+    const result = db.insertNewMatch(match, pronostic, cote, statut, type);
+
+    result
+    .then(data => response.json({ data: data}))
+    .catch(err => console.log(err));
+});
+
 app.post('/connect', (request, response) => {
     console.log("server get : " + JSON.stringify(request.body))
     

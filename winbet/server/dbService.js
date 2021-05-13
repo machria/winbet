@@ -89,6 +89,38 @@ class DbService {
             console.log(error);
         }
     }
+    
+    async insertNewMatch(match, pronostic, cote, statut, type) {
+        try {
+            const dateAdded = new Date();
+            console.log ("match : " + match);
+            console.log ("pronostic : " + pronostic);
+            console.log ("cote : " + cote);
+            console.log ("statut : " + statut);
+            console.log ("type : " + type);
+    
+            const insertId = await new Promise((resolve, reject) => {
+                const query = "INSERT INTO `Paris`(`match`, `prono`, `cote`,`status`, `type`) VALUES (?,?,?,?,?);";
+                
+
+                connection.query(query, [match, pronostic, cote, statut, type] , (err, result) => {
+                    //console.log(result);
+                    if (err) reject(new Error(err.message));
+                    resolve(result.insertId);
+                })
+            });
+            return {
+               // id : insertId,
+                match : match, 
+                pronostic : pronostic, 
+                cote : cote, 
+                statut : statut, 
+                type : type
+            };
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     async connect(password, email){
          try {

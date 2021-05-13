@@ -23,7 +23,13 @@ function loadHTMLTable(data) {
         tableHtml += `<td>${status}</td>`;
         if(type=="Football")
             urlFoot = "ballon-de-football.svg";
-        tableHtml += `<td><img src = ${urlFoot}></td>`;
+        else if(type=="Tennis")
+            urlFoot = "tennis.svg";
+        else if(type == "Basket")
+            urlFoot = "ballon-de-basketball.svg";
+        else
+            urlFoot = "ballon-de-rugby.svg";
+        tableHtml += `<td><img src = ${urlFoot} width = 32px height = 32px></td>`;
         tableHtml += "</tr>";
     });
 
