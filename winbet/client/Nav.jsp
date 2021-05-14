@@ -40,15 +40,15 @@ body {
 						aria-current="page" href="Acceuil.jsp">Accueil</a></li>
 					<li class="nav-item"><a class="nav-link public" href="Public.jsp"
 						tabindex="-1" aria-disabled="true">Public</a></li>
-					<li class="nav-item"><a class="nav-link premium" href="#"
+					<li class="nav-item"><a class="nav-link premium" href="Premium.jsp"
 						tabindex="-1" aria-disabled="true">Premium</a></li>
-					<li class="nav-item"><a class="nav-link galerie" href="#"
+					<li class="nav-item"><a class="nav-link galerie" href="Galerie.jsp"
 						tabindex="-1" aria-disabled="true">Galerie</a></li>
-					<li class="nav-item"><a class="nav-link contact" href="#"
+					<li class="nav-item"><a class="nav-link contact" href="Contact.jsp"
 						tabindex="-1" aria-disabled="true">Contact</a></li>
 					<li class="nav-item"><a class="nav-link inscription" href="index.jsp"
 						tabindex="-1" aria-disabled="true">Inscription</a></li>
-					<li class="nav-item"><a class="nav-link inscription" href="#"
+					<li class="nav-item"><a class="nav-link inscription" href="Connexion.jsp"
 						tabindex="-1" aria-disabled="true">Connexion</a></li>
 				</ul>
 			</div>

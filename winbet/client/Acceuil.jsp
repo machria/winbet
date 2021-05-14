@@ -152,55 +152,55 @@
 			data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="Pronos1.jpeg" class="imgPronos" alt="P1">
+					<img src="img/Pronos1.jpeg" class="imgPronos" alt="P1">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos2.jpeg" class="imgPronos" alt="P2">
+					<img src="img/Pronos2.jpeg" class="imgPronos" alt="P2">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos3.jpeg" class="imgPronos" alt="P3">
+					<img src="img/Pronos3.jpeg" class="imgPronos" alt="P3">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos4.jpeg" class="imgPronos" alt="P4">
+					<img src="img/Pronos4.jpeg" class="imgPronos" alt="P4">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos5.jpeg" class="imgPronos" alt="P5">
+					<img src="img/Pronos5.jpeg" class="imgPronos" alt="P5">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos6.jpeg" class="imgPronos" alt="P6">
+					<img src="img/Pronos6.jpeg" class="imgPronos" alt="P6">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos7.jpeg" class="imgPronos" alt="P7">
+					<img src="img/Pronos7.jpeg" class="imgPronos" alt="P7">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos8.jpeg" class="imgPronos" alt="P8">
+					<img src="img/Pronos8.jpeg" class="imgPronos" alt="P8">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos9.jpeg" class="imgPronos" alt="P9">
+					<img src="img/Pronos9.jpeg" class="imgPronos" alt="P9">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos10.jpeg" class="imgPronos" alt="P10">
+					<img src="img/Pronos10.jpeg" class="imgPronos" alt="P10">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos11.jpeg" class="imgPronos" alt="P11">
+					<img src="img/Pronos11.jpeg" class="imgPronos" alt="P11">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos12.jpeg" class="imgPronos" alt="P12">
+					<img src="img/Pronos12.jpeg" class="imgPronos" alt="P12">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos13.jpeg" class="imgPronos" alt="P13">
+					<img src="img/Pronos13.jpeg" class="imgPronos" alt="P13">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos14.jpeg" class="imgPronos" alt="P14">
+					<img src="img/Pronos14.jpeg" class="imgPronos" alt="P14">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos15.jpeg" class="imgPronos" alt="P15">
+					<img src="img/Pronos15.jpeg" class="imgPronos" alt="P15">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos16.jpeg" class="imgPronos" alt="P16">
+					<img src="img/Pronos16.jpeg" class="imgPronos" alt="P16">
 				</div>
 				<div class="carousel-item">
-					<img src="Pronos17.jpeg" class="imgPronos" alt="P17">
+					<img src="img/Pronos17.jpeg" class="imgPronos" alt="P17">
 				</div>
 			</div>
 

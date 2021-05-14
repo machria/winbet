@@ -57,6 +57,22 @@ class DbService {
         }
     }
     
+    async getParisPremium() {
+        try {
+            const response = await new Promise((resolve, reject) => {
+                const query = "SELECT * FROM Paris Where status = 'Premium';";
+                connection.query(query, (err, results) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                })
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
     async insertNewName(name, born, password, status, email) {
         try {
             const dateAdded = new Date();

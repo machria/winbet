@@ -29,6 +29,16 @@ app.get('/getParisPublic', (request, response) => {
 
 })
 
+app.get('/getParisPremium', (request, response) => {
+    const db = dbService.getDbServiceInstance();
+    const result = db.getParisPremium();
+    //console.log (result);
+    result
+    .then(data => response.json({data : data}))
+    .catch(err => console.log(err));
+
+})
+
 // create
 
 app.post('/insert', (request, response) => {
