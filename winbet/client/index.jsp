@@ -36,6 +36,12 @@
                     border-radius: 0.2rem;
                 }
 </style>
+    <div class="jumbotron">
+        <div class="col-sm-4">
+            <div id="pack-choice">
+            </div>
+        </div>
+    </div>
     <div>
 		<p class = "ispn">Inscription</p>
 	</div>

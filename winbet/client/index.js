@@ -202,8 +202,17 @@ function loadHTMLTable(data) {
 
     table.innerHTML = tableHtml;
     
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get('id')
+    const choicePack = document.getElementById('pack-choice');
+    
+    let texte = "effefefe" +id;
+    choicePack.innerHTML = texte;
+    
 }
 function deleteRow(data) {
    /*
    */
 }
+
