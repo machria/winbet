@@ -46,7 +46,7 @@ body {
 						tabindex="-1" aria-disabled="true">Galerie</a></li>
 					<li class="nav-item"><a class="nav-link contact" href="Contact.jsp"
 						tabindex="-1" aria-disabled="true">Contact</a></li>
-					<li class="nav-item"><a class="nav-link inscription" href="index.jsp"
+					<li class="nav-item"><a class="nav-link inscription" href="Inscription.jsp"
 						tabindex="-1" aria-disabled="true">Inscription</a></li>
 					<li class="nav-item"><a class="nav-link inscription" href="Connexion.jsp"
 						tabindex="-1" aria-disabled="true">Connexion</a></li>

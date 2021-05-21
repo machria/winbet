@@ -12,7 +12,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-   <jsp:include page="Nav.jsp" />
+   <jsp:include page="Header.jsp" />
 			<style>
 
                 label{
@@ -55,6 +55,7 @@
             
         </main>
     </div>
+    <jsp:include page="Footer.jsp" />
     <script src="connexion.js"></script>
      <script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

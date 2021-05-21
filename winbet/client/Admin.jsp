@@ -12,7 +12,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-   <jsp:include page="Nav.jsp" />
+   <jsp:include page="Header.jsp" />
 			<style>
 
                 label{
@@ -68,5 +68,6 @@
             <script src="Admin.js"></script>
         </main>
     </div>
+    <jsp:include page="Footer.jsp" />
 </body>
 </html>

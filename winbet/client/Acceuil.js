@@ -1,6 +1,6 @@
 function redirectionInscription(id) {
     console.log("Ligne 9");
-    window.location = '/winbet/winbet/winbet/client/index.jsp?id='+id;
+    window.location = '/winbet/winbet/winbet/client/Inscription.jsp?id='+id;
 }
 
 document.addEventListener('click', function(event) {

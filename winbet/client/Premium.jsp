@@ -12,7 +12,7 @@
 	crossorigin="anonymous">
 </head>
     <body>
-    <jsp:include page="Nav.jsp" />
+    <jsp:include page="Header.jsp" />
     <div>
 		<p class = "pronos_public">Pronos Premium</p>
 	</div>
@@ -47,5 +47,6 @@
                 margin-top :5%;
             }
         </style>
+        <jsp:include page="Footer.jsp" />
     </body>
 </html>
