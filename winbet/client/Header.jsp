@@ -20,7 +20,7 @@
 			<style>
 .logo {
 	width: 64px;
-	heigth: 64px;
+	height: 64px;
 }
 
 body {

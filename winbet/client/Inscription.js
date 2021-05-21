@@ -205,10 +205,52 @@ function loadHTMLTable(data) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const id = urlParams.get('id')
-    const choicePack = document.getElementById('pack-choice');
+    const choicePack = document.getElementById('info-pack');
+    const pricePack = document.getElementById('price-pack');
     
-    let texte = "effefefe" +id;
+    let price = "";
+    let texte = "";
+    if(id==1){
+        texte +="<ul>";
+        texte +=`<li class = "li_OK">Acces a l'espace Premium</li>`;
+        texte +=`<li class = "li_KO">Acces a la montante</li>`;
+        texte +=`<li class = "li_KO">Acces a la formation de gestion</li>`;
+        texte +=`<li class = "li_OK">Minimum un pronostic par jours</li>`;
+        texte +=`<li class = "li_OK">Analyses redigees et detaillees</li>`;
+        texte +=`<li class = "li_OK">Expertise Football</li>`;
+        texte +=`<li class = "li_OK">Expertise Tennis</li>`;  
+        texte +=`<li class = "li_OK">Expertise Basketball</li>`;
+        texte +="</ul>";
+        price += "<h1>14,99</h1>";
+    }
+    else if(id==2){
+        texte +="<ul>";
+        texte +=`<li class = "li_OK">Acces a l'espace Premium</li>`;
+        texte +=`<li class = "li_OK">Acces a la montante</li>`;
+        texte +=`<li class = "li_KO">Acces a la formation de gestion</li>`;
+        texte +=`<li class = "li_OK">Minimum un pronostic par jours</li>`;
+        texte +=`<li class = "li_OK">Analyses redigees et detaillees</li>`;
+        texte +=`<li class = "li_OK">Expertise Football</li>`;
+        texte +=`<li class = "li_OK">Expertise Tennis</li>`;  
+        texte +=`<li class = "li_OK">Expertise Basketball</li>`;
+        texte +="</ul>";
+        price += "<h1>39,99</h1>";
+    }
+    else{
+        texte +="<ul>";
+        texte +=`<li class = "li_OK">Acces a l'espace Premium</li>`;
+        texte +=`<li class = "li_OK">Acces a la montante</li>`;
+        texte +=`<li class = "li_OK">Acces a la formation de gestion</li>`;
+        texte +=`<li class = "li_OK">Minimum un pronostic par jours</li>`;
+        texte +=`<li class = "li_OK">Analyses redigees et detaillees</li>`;
+        texte +=`<li class = "li_OK">Expertise Football</li>`;
+        texte +=`<li class = "li_OK">Expertise Tennis</li>`;  
+        texte +=`<li class = "li_OK">Expertise Basketball</li>`;
+        texte +="</ul>";
+        price += "<h1>150</h1>";
+    }
     choicePack.innerHTML = texte;
+    pricePack.innerHTML = price;
     
 }
 function deleteRow(data) {

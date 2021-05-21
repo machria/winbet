@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,16 +35,56 @@
                     background-color: #FF5757;
                     border-radius: 0.2rem;
                 }
+                .jumbotron-inscription-pack {
+                    padding: 2rem;
+                    margin: 2rem;
+                    background-color: #212529 ; 
+                    border-radius: 0.2rem;
+                    display : flex;
+                }
+                #info-pack{
+                    color : white;
+                    
+                }
+                #price-pack{
+                    color : white;
+                    text-align: center;
+                }
+                .logo-inscription{
+                    width: 180px;
+	                height: 180px;
+                }
+                .li_OK{
+                    list-style: url('bouton-v.svg');
+                }
+
+                .li_KO{
+                    list-style: url('bouton-x.svg');
+                }
+                
 </style>
-    <div class="jumbotron">
-        <div class="col-sm-4">
-            <div id="pack-choice">
-            </div>
-        </div>
-    </div>
+    
     <div>
 		<p class = "ispn">Inscription</p>
 	</div>
+    
+    <div class="jumbotron-inscription-pack">
+        <div class="col-sm-4">
+            <div id="logo-inscription">
+                <img class="logo-inscription" src="Logo_winbet.png" alt="logo">
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div id="info-pack">
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div id="price-pack">
+                
+            </div>
+        </div>
+    </div>
+    
     <div class="jumbotron">
         <main>
             <label for = "name-input">Pseudo:</label>
