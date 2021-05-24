@@ -107,34 +107,13 @@
             <br><br>
             <button id="add-name-btn">Add People</button>
 
-            <br><br><br>
-            <div>
-               <input placeholder="search by login" id="search-input">
-               <button id="search-btn">Search</button>
-            </div>
-
-            <table id="table">
-                <thead>
-                    <th>ID</th>
-                    <th>Login</th>
-                    <th>Password</th>
-                    <th>Born Date</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                    <th>Delete</th>
-                    <th>Edit</th>
-                </thead>
-                <tbody></tbody>
-            </table>
-
-            <section hidden id="update-row">
-                <label>Login:</label>
-                <input type="text" id="update-name-input">
-                <button id="update-row-btn">Update</button>
-            </section>
         </main>
     </div>
     <jsp:include page="Footer.jsp" />
     <script src="Inscription.js"></script>
+    <script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
 </body>
 </html>

@@ -38,113 +38,9 @@ addBtn.onclick = function () {
     .then(response => response.json())
     .then(data => insertRowIntoTable(data['data']));
 }
-const searchBtn = document.querySelector('#search-btn');
-const updateBtn = document.querySelector('#update-row-btn');
-document.querySelector('table tbody').addEventListener('click', function(event) {
-    if (event.target.className === "delete-row-btn") {
-        deleteRowById(event.target.dataset.id);
-    }
-    if (event.target.className === "edit-row-btn") {
-        handleEditRow(event.target.dataset.id);
-    }
-});
-
-function deleteRowById(id) {
-    fetch('http://localhost:5000/delete/' + id, {
-        method: 'DELETE'
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            location.reload();
-        }
-    });
-}
-
-function handleEditRow(id) {
-    const updateSection = document.querySelector('#update-row');
-    updateSection.hidden = false;
-    document.querySelector('#update-name-input').dataset.id = id;
-}
-
-updateBtn.onclick = function() {
-    const updateNameInput = document.querySelector('#update-name-input');
-
-    console.log(updateNameInput);
-
-    fetch('http://localhost:5000/update', {
-        method: 'PATCH',
-        headers: {
-            'Content-type' : 'application/json'
-        },
-        body: JSON.stringify({
-            id: updateNameInput.dataset.id,
-            name: updateNameInput.value
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            location.reload();
-        }
-    })
-}
-
-/*
-var delBtn = document.getElementsByClassName('delete-row-btn')[0];
-console.log(delBtn);
-for (let item of delBtn) {
-    console.log(item);
-    item.addEventListener("click", function (Event) {
-            console.log(item);
-
-    const delInput = item.attr("data-id") ;
-    const iddel = delInput;
-
-    console.log("name input get :" + delInput);
-    
-    fetch('http://localhost:5000/delete', {
-        headers: {
-            'Content-type': 'application/json'
-        },
-        method: 'POST',
-        body: JSON.stringify({ iddel : iddel})
-    })
-    .then(response => response.json())
-    .then(data => deleteRow(data['data']));
-});
-};
 
 
- var element = document.querySelector('.delete-row-btn');
-element.onclick = function () {
-     console.log(item);
 
-    const delInput = $(this).data().value;
-    const iddel = delInput;
-
-    console.log("name input get :" + delInput);
-    
-    fetch('http://localhost:5000/delete', {
-        headers: {
-            'Content-type': 'application/json'
-        },
-        method: 'POST',
-        body: JSON.stringify({ iddel : iddel})
-    })
-    .then(response => response.json())
-    .then(data => deleteRow(data['data']));
-};
-
-
- */
- searchBtn.onclick = function() {
-    const searchValue = document.querySelector('#search-input').value;
-
-    fetch('http://localhost:5000/search/' + searchValue)
-    .then(response => response.json())
-    .then(data => loadHTMLTable(data['data']));
-}
 function insertRowIntoTable(data) {
     
     console.log(data);
@@ -184,23 +80,6 @@ function loadHTMLTable(data) {
         table.innerHTML = "<tr><td class='no-data' colspan='5'>No Data</td></tr>";
         return;
     }
-
-    let tableHtml = "";
-    console.log(data)
-    data.forEach(function ({id_membre, pseudo, password, born_date,email, status}) {
-        tableHtml += "<tr>";
-        tableHtml += `<td>${id_membre}</td>`;
-        tableHtml += `<td>${pseudo}</td>`;
-        tableHtml += `<td>${password}</td>`;
-        tableHtml += `<td>${new Date(born_date).toLocaleString()}</td>`;
-        tableHtml += `<td>${email}</td>`;
-        tableHtml += `<td>${status}</td>`;
-        tableHtml += `<td><button class="delete-row-btn" data-id=${id_membre}>Delete</td>`;
-        tableHtml += `<td><button class="edit-row-btn" data-id=${id_membre}>Edit</td>`;
-        tableHtml += "</tr>";
-    });
-
-    table.innerHTML = tableHtml;
     
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
